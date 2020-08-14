@@ -1,0 +1,24 @@
+<h2>Search products</h2>
+
+<form action="/products" method= "GET">
+<label>Name</label>
+<input type="text" name="name" value="<%= searchOptions.name %>">
+<button type="submit">Search</button>
+</form>
+<br>
+<table >
+    <tr>
+        <th>Product Name</th>
+        <th>Product Description</th>
+        <th>Product Price</th>
+    </tr>
+<% docs.forEach(product =>{ %>
+    <div> 
+        <tr>
+            <td><%=product.name %></td>
+            <td><%=product.description %></td>
+            <td><%=product.price %></td>
+        </tr>
+    </div>
+<%})%>
+</table>
